@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Модуль аутентификации</title>
+  <style>
+    .auth-module {
+      max-width: 300px;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin-top: 10px;
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin: 5px 0 10px 0;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-module"><form id="register-form" style="display:none;">
+      <input type="text" name="username" placeholder="Имя пользователя" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Пароль" required />
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Модуль аутентификации</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 30px;
+    }
+    .auth-module {
+      max-width: 320px;
+      margin: 0 auto;
+      border: 2px solid #4a90e2;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #e6f0ff;
+    }
+    button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #357abd;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #4a90e2;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    input::placeholder {
+      color: #4a90e2;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<section id="report-module">
+  <h2>Генерация отчётов по задачам</h2>
+
+  <!-- Форма выбора параметров отчёта -->
+  <form id="report-form">
+    <label for="date-from">Дата с</label>
+    <input type="date" id="date-from" name="date-from" required>
+    
+    <label for="date-to">Дата по</label>
+    <input type="date" id="date-to" name="date-to" required>
+    
+    <label for="status">Статус задачи</label>
+    <select id="status" name="status">
+      <option value="all">Все</option>
+      <option value="pending">В ожидании</option>
+      <option value="in-progress">В процессе</option>
+      <option value="completed">Выполнено</option>
+    </select>
+
+    <label for="user">Пользователь</label>
+    <input type="text" id="user" name="user" placeholder="Имя пользователя">
+
+    <button type="submit">Сгенерировать отчёт</button>
+  </form>
+
+  <!-- Место для отображения отчёта -->
+  <div id="report-result">
+    <!-- Здесь динамически появятся данные отчёта -->
+  </div>
+</section>
+</div>
+</body>
+</html>

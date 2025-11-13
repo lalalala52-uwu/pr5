@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Модуль аутентификации</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 30px;
+    }
+    .auth-module {
+      max-width: 320px;
+      margin: 0 auto;
+      border: 2px solid #4a90e2;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #e6f0ff;
+    }
+    button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #357abd;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #4a90e2;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    input::placeholder {
+      color: #4a90e2;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<section id="statistics-module">
+  <h2>Статистика выполнения задач</h2>
+
+  <form id="stats-filter-form">
+    <label for="period-from">Период с</label>
+    <input type="date" id="period-from" name="period-from" required>
+
+    <label for="period-to">Период по</label>
+    <input type="date" id="period-to" name="period-to" required>
+
+    <label for="task-type">Тип задачи</label>
+    <select id="task-type" name="task-type">
+      <option value="all">Все</option>
+      <option value="bug">Ошибка</option>
+      <option value="feature">Функционал</option>
+      <option value="improvement">Улучшение</option>
+    </select>
+
+    <button type="submit">Показать статистику</button>
+  </form>
+
+  <div id="stats-results">
+    <!-- Здесь будут отображаться графики и цифры статистики -->
+  </div>
+</section>
+</body>
+</html>
